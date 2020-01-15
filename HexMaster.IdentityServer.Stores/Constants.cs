@@ -14,10 +14,12 @@ namespace HexMaster.IdentityServer.Stores
     public class TableNames
     {
         public const string Clients = "clients";
+        public const string User = "users";
     }
 
     public class PartitionKeys
     {
         public const string Clients = "client";
+        public const string User = "user";
     }
 }

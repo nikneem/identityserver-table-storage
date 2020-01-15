@@ -16,9 +16,9 @@ namespace HexMaster.IdentityServer.Stores.Stores
 
         public async Task<Client> FindClientByIdAsync(string clientId)
         {
+            await _table.CreateIfNotExistsAsync();
             var operation = TableOperation.Retrieve<ClientEntity>(PartitionKeys.Clients, clientId);
             var operationResult = await _table.ExecuteAsync(operation);
-
             if (operationResult.Result is ClientEntity clientEntity)
             {
                 var client = new Client
