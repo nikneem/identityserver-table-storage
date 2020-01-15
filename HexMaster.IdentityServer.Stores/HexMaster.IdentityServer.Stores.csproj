@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Eduard Keilholz</Authors>
+    <Product>Azure Table Storage implementations of the IdentityServer Store abstractions</Product>
+    <Description>Azure Table Storage is one of the cheapest storage mechanisms available nowadays. You can now use this storage environment for your IdentityServer setup.</Description>
+    <Copyright>2020</Copyright>
+    <PackageProjectUrl>https://github.com/nikneem/identityserver-table-storage</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nikneem/identityserver-table-storage</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>Store, Azure, Table Storage, IdentityServer</PackageTags>
+    <PackageReleaseNotes>First implementation, the clients store</PackageReleaseNotes>
+    <AssemblyVersion>0.0.0.1</AssemblyVersion>
+    <FileVersion>0.0.0.1</FileVersion>
+    <Version>0.0.1</Version>
+    <PackageLicenseFile>license.md</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4.Storage" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="license.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
